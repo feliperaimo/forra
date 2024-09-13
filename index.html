@@ -81,19 +81,17 @@
             var mensagem = document.getElementById("mensagem");
 
             if (veiculo === "CARRO_MOTO") {
-                mensagem.textContent = "FORRA";
+                mensagem.textContent = "FORRA!";
                 mensagem.style.color = "green";
             } else {
-                mensagem.textContent = "NÃO FORRA";
+                mensagem.textContent = "NÃO FORRA!";
                 mensagem.style.color = "red";
             }
         }
     </script>
 </head>
 <body>
-    <!-- Container da imagem com bordas arredondadas -->
     <div class="image-container">
-        <!-- Substitua "sua-imagem-aqui.jpg" pelo caminho correto da imagem -->
         <img src="forra.png" alt="FORRA BANCO SE DE MOTO E CARRO!">
     </div>
 
@@ -105,7 +103,7 @@
             <option value="CARRO_MOTO">DE MOTO E CARRO</option>
             <option value="OUTROS">OUTROS</option>
         </select>
-        <button onclick="verificarVeiculo()">VER SE FORRA!</button>
+        <button onclick="verificarVeiculo()">VER SE FORRA</button>
         <div class="message" id="mensagem"></div>
     </div>
 
