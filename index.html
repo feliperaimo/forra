@@ -4,25 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verificação de Veículo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
     <script>
         function verificarVeiculo() {
             var veiculo = document.getElementById("veiculo").value;
-            if (veiculo === "CARRO" || veiculo === "MOTO" || veiculo === "CARRO_MOTO") {
-                alert("FORRA");
+            var mensagem = document.getElementById("mensagem");
+
+            if (veiculo === "CARRO_MOTO") {
+                mensagem.textContent = "FORRA";
+                mensagem.style.color = "green";
             } else {
-                alert("NÃO FORRA");
+                mensagem.textContent = "NÃO FORRA";
+                mensagem.style.color = "red";
             }
         }
     </script>
 </head>
 <body>
-    <h1>Escolha o tipo de veículo</h1>
-    <select id="veiculo">
-        <option value="CARRO">Carro</option>
-        <option value="MOTO">Moto</option>
-        <option value="CARRO_MOTO">Carro e Moto</option>
-        <option value="OUTROS">Outros</option>
-    </select>
-    <button onclick="verificarVeiculo()">Verificar</button>
+    <div class="container">
+        <h1>Escolha o tipo de veículo</h1>
+        <select id="veiculo">
+            <option value="CARRO">Carro</option>
+            <option value="MOTO">Moto</option>
+            <option value="CARRO_MOTO">Carro e Moto</option>
+            <option value="OUTROS">Outros</option>
+        </select>
+        <button onclick="verificarVeiculo()">Verificar</button>
+        <div class="message" id="mensagem"></div>
+    </div>
 </body>
 </html>
