@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Veículo</title>
+    <script>
+        function verificarVeiculo() {
+            var veiculo = document.getElementById("veiculo").value;
+            if (veiculo === "CARRO" || veiculo === "MOTO" || veiculo === "CARRO_MOTO") {
+                alert("FORRA");
+            } else {
+                alert("NÃO FORRA");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Escolha o tipo de veículo</h1>
+    <select id="veiculo">
+        <option value="CARRO">Carro</option>
+        <option value="MOTO">Moto</option>
+        <option value="CARRO_MOTO">Carro e Moto</option>
+        <option value="OUTROS">Outros</option>
+    </select>
+    <button onclick="verificarVeiculo()">Verificar</button>
+</body>
+</html>
